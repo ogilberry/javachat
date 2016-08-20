@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 /**
  * Created by Jordan on 20-Aug-16.
@@ -14,10 +15,12 @@ public class ClientMain {
     private int port;
     private PrintWriter writer;
     private BufferedReader reader;
+    private ArrayList<String> messages;
 
-    ClientMain(String host, int port){
+    ClientMain(String host, int port, ArrayList<String> messages){
         this.host = host;
         this.port = port;
+        this.messages= messages;
         go();
     }
 
@@ -37,7 +40,7 @@ public class ClientMain {
             //reader to read lines of text from the server
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             //loop for messages from the server
-            ClientMainThread messageThread = new ClientMainThread(reader);
+            ClientMainThread messageThread = new ClientMainThread(reader, messages);
             messageThread.start();
 
         }catch(IOException ioe){

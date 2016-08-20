@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by Jordan on 20-Aug-16.
@@ -7,9 +8,11 @@ import java.io.IOException;
 public class ClientMainThread extends Thread {
 
     private BufferedReader reader;
+    private ArrayList<String> messages;
 
-    ClientMainThread(BufferedReader reader){
+    ClientMainThread(BufferedReader reader, ArrayList<String> messages){
         this.reader = reader;
+        this.messages = messages;
     }
 
     @Override
@@ -21,6 +24,7 @@ public class ClientMainThread extends Thread {
                 if (reader.ready()) {
                     String message = reader.readLine();
                     System.out.println(message);
+                    messages.add(message);
                 }
             }
         }catch(IOException ioe){

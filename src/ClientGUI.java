@@ -11,6 +11,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 /**
  * Created by Jordan on 20-Aug-16.
  */
@@ -21,6 +23,7 @@ public class ClientGUI extends Application {
     private ListView messageView;
     private Button sendButton;
     private ClientMain client;
+    private ArrayList<String> messages;
 
     public static void main(String[] args){
         launch(args);
@@ -57,7 +60,8 @@ public class ClientGUI extends Application {
         root = new GridPane();
         setRootSettings();
 
-        client = new ClientMain("localhost", 55555);
+        messages = new ArrayList<String>();
+        client = new ClientMain("localhost", 55555, messages);
 
         //create all the controls
         createMessagingControls();
