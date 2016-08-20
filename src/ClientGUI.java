@@ -6,10 +6,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -26,6 +23,9 @@ public class ClientGUI extends Application {
     private Scene loginScene;
     private TextArea inputArea;
     private TextArea messageView;
+    private TextField usernameField;
+    private PasswordField passwordField;
+    private Button loginButton;
     private Button sendButton;
     private ClientMain client;
     private ArrayList<String> messages;
@@ -78,7 +78,16 @@ public class ClientGUI extends Application {
     }
 
     private void createLoginControls(){
-        
+        Label usernameLabel = new Label("Username: ");
+        loginPane.add(usernameLabel, 1, 1);
+        Label passwordLabel = new Label("Password: ");
+        loginPane.add(passwordLabel, 1, 2);
+        usernameField = new TextField();
+        loginPane.add(usernameField, 2, 1);
+        passwordField = new PasswordField();
+        loginPane.add(passwordField, 2, 2);
+        loginButton = new Button("Log in");
+        loginPane.add(loginButton, 3, 3);
     }
 
     @Override
