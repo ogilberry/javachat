@@ -12,11 +12,17 @@ public class ClientMain {
     private boolean hasMessage = false;
     private String host;
     private int port;
+    private PrintWriter writer;
 
     ClientMain(String host, int port){
         this.host = host;
         this.port = port;
         go();
+    }
+
+    public void sendMessageToServer(String message){
+        writer.println(message);
+        writer.flush();
     }
 
     private void go(){
@@ -25,7 +31,7 @@ public class ClientMain {
             Socket socket = new Socket(host, port);
 
             //send a message to the server
-            PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+            writer = new PrintWriter(socket.getOutputStream(), true);
             writer.println("Hello Server! From the client");
 
             //reader to read lines of text from the server
@@ -40,7 +46,7 @@ public class ClientMain {
 
     }
 
-    public static void main(String[] args){
+    /*public static void main(String[] args){
 
         if(args.length!=2) {
             System.out.println("Usage: ClientMain <host> <port>");
@@ -68,6 +74,7 @@ public class ClientMain {
         }
 
     }
+    */
 
     private boolean hasMessage(){
         return this.hasMessage;

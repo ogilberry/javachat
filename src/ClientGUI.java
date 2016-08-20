@@ -38,6 +38,7 @@ public class ClientGUI extends Application {
                 //when the button is pressed, grab the text from the inputArea, and send it to the server
                 String message = inputArea.getText();
                 inputArea.clear();
+                client.sendMessageToServer(message);
             }
         });
         root.add(sendButton, 1, 3);
