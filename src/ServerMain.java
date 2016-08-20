@@ -2,7 +2,9 @@
  * Created by Jordan on 20-Aug-16.
  */
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -25,6 +27,12 @@ public class ServerMain {
             while(true){
                 Socket newSocket = server.accept();
                 System.out.println("Connection accepted from " + newSocket.getInetAddress().getHostName());
+
+                //get message from the client
+                BufferedReader reader = new BufferedReader(new InputStreamReader(newSocket.getInputStream()));
+                System.out.println("A client says: " + reader.readLine());
+
+                //send message to the client
                 PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);
                 writer.println("Welcome! From the server");
                 writers.add(writer);

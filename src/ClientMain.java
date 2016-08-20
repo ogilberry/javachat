@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
@@ -18,6 +19,11 @@ public class ClientMain {
         try{
             //connect to the server
             Socket socket = new Socket(args[0], Integer.parseInt(args[1]));
+
+            //send a message to the server
+            PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+            writer.println("Hello Server! From the client");
+
             //reader to read lines of text from the server
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             //loop for messages from the server
