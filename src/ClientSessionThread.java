@@ -37,6 +37,7 @@ public class ClientSessionThread extends Thread{
                 if(reader.ready()){
                     String message = reader.readLine();
                     System.out.println(message);
+                    sendToAll(message);
                 }
             }
 

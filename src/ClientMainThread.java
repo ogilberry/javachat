@@ -17,6 +17,7 @@ public class ClientMainThread extends Thread {
         try {
             System.out.println("ClientMainThread started!");
             while(true) {
+                //loop for messages from the server
                 if (reader.ready()) {
                     String message = reader.readLine();
                     System.out.println(message);
