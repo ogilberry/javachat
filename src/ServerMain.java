@@ -25,7 +25,8 @@ public class ServerMain {
             while(true){
                 Socket newSocket = server.accept();
                 System.out.println("Connection accepted from " + newSocket.getInetAddress().getHostName());
-                PrintWriter writer = new PrintWriter(newSocket.getOutputStream());
+                PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);
+                writer.println("Welcome! From the server");
                 writers.add(writer);
             }
 

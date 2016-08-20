@@ -19,6 +19,7 @@ public class ClientSessionThread extends Thread{
     public void run() {
 
         try {
+            //receives messages from the client I think?
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
         }catch(IOException ioe){
