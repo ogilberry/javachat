@@ -17,6 +17,7 @@ import java.util.ArrayList;
  */
 public class ClientGUI extends Application {
 
+    private Stage primaryStage;
     private GridPane messagingPane;
     private GridPane loginPane;
     private Scene messagingScene;
@@ -86,13 +87,21 @@ public class ClientGUI extends Application {
         loginPane.add(usernameField, 2, 1);
         passwordField = new PasswordField();
         loginPane.add(passwordField, 2, 2);
+
         loginButton = new Button("Log in");
-        loginPane.add(loginButton, 3, 3);
+        loginButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                clientName = usernameField.getText();
+                primaryStage.setScene(messagingScene);
+            }
+        });
+        loginPane.add(loginButton, 2, 3);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
+        this.primaryStage = primaryStage;
         messagingPane = new GridPane();
         loginPane = new GridPane();
         setMessagingPaneSettings();
@@ -108,7 +117,7 @@ public class ClientGUI extends Application {
         messagingScene = new Scene(messagingPane, 400, 400);
         loginScene = new Scene(loginPane, 400, 400);
 
-        primaryStage.setScene(messagingScene);
-        primaryStage.show();
+        this.primaryStage.setScene(loginScene);
+        this.primaryStage.show();
     }
 }
