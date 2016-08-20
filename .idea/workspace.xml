@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="812f0481-49bc-43be-b745-3d12b19ec5a7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/javachat/ClientGUI$2.class" afterPath="$PROJECT_DIR$/out/production/javachat/ClientGUI$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/javachat/ClientGUI.class" afterPath="$PROJECT_DIR$/out/production/javachat/ClientGUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClientGUI.java" afterPath="$PROJECT_DIR$/src/ClientGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClientMain.java" afterPath="$PROJECT_DIR$/src/ClientMain.java" />
     </list>
     <ignored path="javachat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,31 +59,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="94" column="21" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+            <state relative-caret-position="134">
+              <caret line="124" column="21" selection-start-line="124" selection-start-column="21" selection-end-line="124" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
+                <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
+                <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
+                <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+                <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="219">
+              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#784#785#0" expanded="true" />
                 <element signature="e#823#824#0" expanded="true" />
-                <element signature="e#2542#2543#0" expanded="true" />
-                <element signature="e#2580#2581#0" expanded="true" />
-                <element signature="e#2614#2615#0" expanded="true" />
-                <element signature="e#2641#2642#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,8 +125,8 @@
         <option value="$PROJECT_DIR$/src/ClientMainThread.java" />
         <option value="$PROJECT_DIR$/src/ServerMain.java" />
         <option value="$PROJECT_DIR$/src/ClientSessionThread.java" />
-        <option value="$PROJECT_DIR$/src/ClientMain.java" />
         <option value="$PROJECT_DIR$/src/ClientGUI.java" />
+        <option value="$PROJECT_DIR$/src/ClientMain.java" />
       </list>
     </option>
   </component>
@@ -701,12 +706,12 @@
       <option name="presentableId" value="Default" />
       <updated>1471653298520</updated>
       <workItem from="1471653310632" duration="295000" />
-      <workItem from="1471660750956" duration="23569000" />
+      <workItem from="1471660750956" duration="24573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23864000" />
+    <option name="totallyTimeSpent" value="24868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -779,7 +784,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -793,6 +800,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,28 +851,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientMain.java">
+    <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state relative-caret-position="134">
+          <caret line="124" column="21" selection-start-line="124" selection-start-column="21" selection-end-line="124" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#2542#2543#0" expanded="true" />
-            <element signature="e#2580#2581#0" expanded="true" />
-            <element signature="e#2614#2615#0" expanded="true" />
-            <element signature="e#2641#2642#0" expanded="true" />
+            <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/ClientMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="94" column="21" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+        <state relative-caret-position="219">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
           </folding>
         </state>
       </provider>

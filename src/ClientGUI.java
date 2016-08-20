@@ -78,6 +78,18 @@ public class ClientGUI extends Application {
         }
     }
 
+    private void startMessagingScene(){
+        //create all the controls and member variables needed for the messaging scene, then go there
+        messagingPane = new GridPane();
+        setMessagingPaneSettings();
+        createMessagingControls();
+        primaryStage.setScene(messagingScene);
+        messages = new ArrayList<String>();
+        client = new ClientMain("localhost", 55555, messages, this);
+        messagingScene = new Scene(messagingPane, 400, 400);
+        primaryStage.setScene(messagingScene);
+    }
+
     private void createLoginControls(){
         Label usernameLabel = new Label("Username: ");
         loginPane.add(usernameLabel, 1, 1);
@@ -95,11 +107,12 @@ public class ClientGUI extends Application {
             @Override
             public void handle(ActionEvent event) {
                 clientName = usernameField.getText();
+                //only go to the messaging Scene if the log in credentials are valid (return if not)
                 if(clientName.trim().isEmpty() || clientName==null){
                     errorLabel.setText("Error: You must have a username");
                     return;
                 }
-                primaryStage.setScene(messagingScene);
+                startMessagingScene();
             }
         });
         loginPane.add(loginButton, 2, 3);
@@ -109,21 +122,13 @@ public class ClientGUI extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
-        messagingPane = new GridPane();
         loginPane = new GridPane();
-        setMessagingPaneSettings();
         setLoginPaneSettings();
 
         //create all the controls
         createLoginControls();
-        createMessagingControls();
-        clientName = "User x";
-        messages = new ArrayList<String>();
-        client = new ClientMain("localhost", 55555, messages, this);
 
-        messagingScene = new Scene(messagingPane, 400, 400);
         loginScene = new Scene(loginPane, 400, 400);
-
         this.primaryStage.setScene(loginScene);
         this.primaryStage.show();
     }
