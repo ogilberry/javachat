@@ -58,8 +58,8 @@
       <file leaf-file-name="ClientGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -701,12 +701,12 @@
       <option name="presentableId" value="Default" />
       <updated>1471653298520</updated>
       <workItem from="1471653310632" duration="295000" />
-      <workItem from="1471660750956" duration="20163000" />
+      <workItem from="1471660750956" duration="20459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20458000" />
+    <option name="totallyTimeSpent" value="20754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -857,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        <state relative-caret-position="119">
+          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

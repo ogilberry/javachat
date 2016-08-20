@@ -62,7 +62,7 @@ public class ClientGUI extends Application {
         loginPane.setHgap(10);
         loginPane.setVgap(10);
     }
-    
+
     private void setMessagingPaneSettings(){
         messagingPane.setAlignment(Pos.CENTER);
         messagingPane.setPadding(new Insets(20, 20, 20, 20));
@@ -77,19 +77,28 @@ public class ClientGUI extends Application {
         }
     }
 
+    private void createLoginControls(){
+        
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
 
         messagingPane = new GridPane();
+        loginPane = new GridPane();
         setMessagingPaneSettings();
+        setLoginPaneSettings();
 
         //create all the controls
+        createLoginControls();
         createMessagingControls();
         clientName = "User x";
         messages = new ArrayList<String>();
         client = new ClientMain("localhost", 55555, messages, this);
 
         messagingScene = new Scene(messagingPane, 400, 400);
+        loginScene = new Scene(loginPane, 400, 400);
+
         primaryStage.setScene(messagingScene);
         primaryStage.show();
     }
