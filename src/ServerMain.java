@@ -58,4 +58,8 @@ public class ServerMain {
         }
     }
 
+    private static ArrayList<String> getMessages(){
+        return messages;
+    }
+
 }
