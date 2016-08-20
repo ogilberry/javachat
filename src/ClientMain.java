@@ -8,6 +8,8 @@ import java.net.Socket;
  */
 public class ClientMain {
 
+    private boolean hasMessage = false;
+
     public static void main(String[] args){
 
         if(args.length!=2) {
@@ -20,14 +22,24 @@ public class ClientMain {
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             //loop for messages from the server
             while(true){
-                String message = reader.readLine();
-                System.out.println(message);
+                if(reader.ready()) {
+                    String message = reader.readLine();
+                    System.out.println(message);
+                }
             }
 
         }catch(IOException ioe){
             ioe.printStackTrace();
         }
 
+    }
+
+    private boolean hasMessage(){
+        return this.hasMessage;
+    }
+
+    private String getMessage(){
+        return null;
     }
 
 }
