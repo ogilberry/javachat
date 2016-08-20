@@ -87,16 +87,23 @@ public class ClientGUI extends Application {
         loginPane.add(usernameField, 2, 1);
         passwordField = new PasswordField();
         loginPane.add(passwordField, 2, 2);
-
+        Label errorLabel = new Label("");
+        errorLabel.setStyle("-fx-text-fill: red;");
+        loginPane.add(errorLabel, 1, 4, 2, 1);
         loginButton = new Button("Log in");
         loginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 clientName = usernameField.getText();
+                if(clientName.trim().isEmpty() || clientName==null){
+                    errorLabel.setText("Error: You must have a username");
+                    return;
+                }
                 primaryStage.setScene(messagingScene);
             }
         });
         loginPane.add(loginButton, 2, 3);
+
     }
 
     @Override
