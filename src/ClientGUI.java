@@ -26,6 +26,7 @@ public class ClientGUI extends Application {
     private Button sendButton;
     private ClientMain client;
     private ArrayList<String> messages;
+    private String clientName;      //the username currently using the client
 
     public static void main(String[] args){
         launch(args);
@@ -44,14 +45,9 @@ public class ClientGUI extends Application {
             @Override
             public void handle(ActionEvent event) {
                 //when the button is pressed, grab the text from the inputArea, and send it to the server
-                String message = inputArea.getText();
+                String message = clientName + ": " + inputArea.getText();
                 inputArea.clear();
                 client.sendMessageToServer(message);
-                //clear the message box, and add every message in the arraylist messages to it
-                messageView.clear();
-                for(String oldMessage : messages){
-                    messageView.appendText(oldMessage + "\n");
-                }
             }
         });
         root.add(sendButton, 1, 3);
@@ -79,7 +75,7 @@ public class ClientGUI extends Application {
 
         //create all the controls
         createMessagingControls();
-
+        clientName = "User x";
         messages = new ArrayList<String>();
         client = new ClientMain("localhost", 55555, messages, this);
 
