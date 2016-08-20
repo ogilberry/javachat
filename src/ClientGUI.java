@@ -20,7 +20,10 @@ import java.util.ArrayList;
  */
 public class ClientGUI extends Application {
 
-    private GridPane root;
+    private GridPane messagingPane;
+    private GridPane loginPane;
+    private Scene messagingScene;
+    private Scene loginScene;
     private TextArea inputArea;
     private TextArea messageView;
     private Button sendButton;
@@ -36,10 +39,10 @@ public class ClientGUI extends Application {
         messageView = new TextArea();
         messageView.setPrefHeight(200);
         messageView.setEditable(false);
-        root.add(messageView, 1, 1);
+        messagingPane.add(messageView, 1, 1);
         inputArea = new TextArea();
         inputArea.setPrefHeight(60);
-        root.add(inputArea, 1, 2);
+        messagingPane.add(inputArea, 1, 2);
         sendButton = new Button("Send Message");
         sendButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -50,14 +53,21 @@ public class ClientGUI extends Application {
                 client.sendMessageToServer(message);
             }
         });
-        root.add(sendButton, 1, 3);
+        messagingPane.add(sendButton, 1, 3);
     }
 
-    private void setRootSettings(){
-        root.setAlignment(Pos.CENTER);
-        root.setPadding(new Insets(20, 20, 20, 20));
-        root.setHgap(10);
-        root.setVgap(10);
+    private void setLoginPaneSettings(){
+        loginPane.setAlignment(Pos.CENTER);
+        loginPane.setPadding(new Insets(20, 20, 20, 20));
+        loginPane.setHgap(10);
+        loginPane.setVgap(10);
+    }
+    
+    private void setMessagingPaneSettings(){
+        messagingPane.setAlignment(Pos.CENTER);
+        messagingPane.setPadding(new Insets(20, 20, 20, 20));
+        messagingPane.setHgap(10);
+        messagingPane.setVgap(10);
     }
 
     public void updateMessageView(){
@@ -70,8 +80,8 @@ public class ClientGUI extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        root = new GridPane();
-        setRootSettings();
+        messagingPane = new GridPane();
+        setMessagingPaneSettings();
 
         //create all the controls
         createMessagingControls();
@@ -79,7 +89,7 @@ public class ClientGUI extends Application {
         messages = new ArrayList<String>();
         client = new ClientMain("localhost", 55555, messages, this);
 
-        Scene messagingScene = new Scene(root, 400, 400);
+        messagingScene = new Scene(messagingPane, 400, 400);
         primaryStage.setScene(messagingScene);
         primaryStage.show();
     }
