@@ -17,7 +17,7 @@ public class ServerMain {
     public static void main(String[] args){
         try {
             //create server on first available port
-            ServerSocket server = new ServerSocket(0);
+            ServerSocket server = new ServerSocket(55555);
             int port = server.getLocalPort();
             System.out.println("Server started on port " + Integer.toString(port));
 
