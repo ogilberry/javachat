@@ -9,10 +9,12 @@ public class ClientMainThread extends Thread {
 
     private BufferedReader reader;
     private ArrayList<String> messages;
+    private ClientGUI clientGUI;
 
-    ClientMainThread(BufferedReader reader, ArrayList<String> messages){
+    ClientMainThread(BufferedReader reader, ArrayList<String> messages, ClientGUI clientGUI){
         this.reader = reader;
         this.messages = messages;
+        this.clientGUI = clientGUI;
     }
 
     @Override
@@ -25,6 +27,7 @@ public class ClientMainThread extends Thread {
                     String message = reader.readLine();
                     System.out.println(message);
                     messages.add(message);
+                    clientGUI.updateMessageView();
                 }
             }
         }catch(IOException ioe){

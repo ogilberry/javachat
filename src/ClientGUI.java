@@ -63,17 +63,24 @@ public class ClientGUI extends Application {
         root.setVgap(10);
     }
 
+    public void updateMessageView(){
+        messageView.clear();
+        for(String message : messages){
+            messageView.appendText(message + "\n");
+        }
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
 
         root = new GridPane();
         setRootSettings();
 
-        messages = new ArrayList<String>();
-        client = new ClientMain("localhost", 55555, messages);
-
         //create all the controls
         createMessagingControls();
+
+        messages = new ArrayList<String>();
+        client = new ClientMain("localhost", 55555, messages, this);
 
         Scene messagingScene = new Scene(root, 400, 400);
         primaryStage.setScene(messagingScene);

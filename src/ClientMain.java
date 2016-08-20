@@ -16,11 +16,13 @@ public class ClientMain {
     private PrintWriter writer;
     private BufferedReader reader;
     private ArrayList<String> messages;
+    private ClientGUI clientGUI;
 
-    ClientMain(String host, int port, ArrayList<String> messages){
+    ClientMain(String host, int port, ArrayList<String> messages, ClientGUI clientGUI){
         this.host = host;
         this.port = port;
         this.messages= messages;
+        this.clientGUI = clientGUI;
         go();
     }
 
@@ -40,7 +42,7 @@ public class ClientMain {
             //reader to read lines of text from the server
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             //loop for messages from the server
-            ClientMainThread messageThread = new ClientMainThread(reader, messages);
+            ClientMainThread messageThread = new ClientMainThread(reader, messages, clientGUI);
             messageThread.start();
 
         }catch(IOException ioe){
