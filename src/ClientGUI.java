@@ -1,4 +1,6 @@
 import javafx.application.Application;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -20,7 +22,7 @@ public class ClientGUI extends Application {
 
     private GridPane root;
     private TextArea inputArea;
-    private ListView messageView;
+    private TextArea messageView;
     private Button sendButton;
     private ClientMain client;
     private ArrayList<String> messages;
@@ -30,7 +32,9 @@ public class ClientGUI extends Application {
     }
 
     private void createMessagingControls(){
-        messageView = new ListView();
+        messageView = new TextArea();
+        messageView.setPrefHeight(200);
+        messageView.setEditable(false);
         root.add(messageView, 1, 1);
         inputArea = new TextArea();
         root.add(inputArea, 1, 2);
@@ -42,6 +46,11 @@ public class ClientGUI extends Application {
                 String message = inputArea.getText();
                 inputArea.clear();
                 client.sendMessageToServer(message);
+                //clear the message box, and add every message in the arraylist messages to it
+                messageView.clear();
+                for(String oldMessage : messages){
+                    messageView.appendText(oldMessage + "\n");
+                }
             }
         });
         root.add(sendButton, 1, 3);
