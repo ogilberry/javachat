@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class ServerMain {
 
+    private static ArrayList<String> messages;
 
     public static void main(String[] args){
         try {
@@ -22,6 +23,7 @@ public class ServerMain {
 
             //an array of PrintWriters to send messages to the clients
             ArrayList<PrintWriter> writers = new ArrayList<PrintWriter>();
+            messages = new ArrayList<String>();
 
             //loop for connections and accept them
             while(true){
@@ -30,7 +32,10 @@ public class ServerMain {
 
                 //get message from the client
                 BufferedReader reader = new BufferedReader(new InputStreamReader(newSocket.getInputStream()));
-                System.out.println("A client says: " + reader.readLine());
+                String message = reader.readLine();
+                System.out.println("A client says: " + message);
+                messages.add(message);
+                printAllMessages();
 
                 //send message to the client
                 PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);
@@ -40,6 +45,16 @@ public class ServerMain {
 
         }catch(IOException ioe){
             ioe.printStackTrace();
+        }
+    }
+
+    private static void printAllMessages(){
+        System.out.println("All messages: ");
+        if(messages==null){
+            return;
+        }
+        for(String message : messages){
+            System.out.println(message);
         }
     }
 
