@@ -13,7 +13,13 @@ public class ServerMain {
         try {
             //create server on first available port
             ServerSocket server = new ServerSocket(0);
-            final int port = server.getLocalPort();
+            int port = server.getLocalPort();
+            System.out.println("Server started on port " + Integer.toString(port));
+            //loop for connections and accept them
+            while(true){
+                Socket newSocket = server.accept();
+                System.out.println("Connection accepted from " + newSocket.getInetAddress().getHostName());
+            }
 
         }catch(IOException ioe){
             ioe.printStackTrace();
