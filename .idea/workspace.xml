@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="812f0481-49bc-43be-b745-3d12b19ec5a7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClientMain.java" afterPath="$PROJECT_DIR$/src/ClientMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClientMainThread.java" afterPath="$PROJECT_DIR$/src/ClientMainThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClientSessionThread.java" afterPath="$PROJECT_DIR$/src/ClientSessionThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServerMain.java" afterPath="$PROJECT_DIR$/src/ServerMain.java" />
     </list>
     <ignored path="javachat.iws" />
@@ -32,14 +31,14 @@
       <file leaf-file-name="ServerMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ServerMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+            <state relative-caret-position="185">
+              <caret line="36" column="89" selection-start-line="36" selection-start-column="89" selection-end-line="36" selection-end-column="89" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#752#765#0" expanded="true" />
-                <element signature="e#2230#2231#0" expanded="true" />
-                <element signature="e#2261#2262#0" expanded="true" />
+                <element signature="e#2326#2327#0" expanded="true" />
+                <element signature="e#2357#2358#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,12 +47,10 @@
       <file leaf-file-name="ClientSessionThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientSessionThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="236">
+              <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#312#313#0" expanded="true" />
-                <element signature="e#348#349#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,10 +121,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ClientGUI.java" />
-        <option value="$PROJECT_DIR$/src/ClientSessionThread.java" />
         <option value="$PROJECT_DIR$/src/ClientMain.java" />
         <option value="$PROJECT_DIR$/src/ClientMainThread.java" />
         <option value="$PROJECT_DIR$/src/ServerMain.java" />
+        <option value="$PROJECT_DIR$/src/ClientSessionThread.java" />
       </list>
     </option>
   </component>
@@ -707,12 +704,12 @@
       <option name="presentableId" value="Default" />
       <updated>1471653298520</updated>
       <workItem from="1471653310632" duration="295000" />
-      <workItem from="1471660750956" duration="11382000" />
+      <workItem from="1471660750956" duration="12240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11677000" />
+    <option name="totallyTimeSpent" value="12535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -851,26 +848,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientSessionThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="236">
+          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ServerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+        <state relative-caret-position="185">
+          <caret line="36" column="89" selection-start-line="36" selection-start-column="89" selection-end-line="36" selection-end-column="89" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#752#765#0" expanded="true" />
-            <element signature="e#2230#2231#0" expanded="true" />
-            <element signature="e#2261#2262#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+            <element signature="e#2357#2358#0" expanded="true" />
           </folding>
         </state>
       </provider>

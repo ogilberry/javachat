@@ -1,7 +1,9 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 /**
  * Created by Jordan on 20-Aug-16.
@@ -10,9 +12,18 @@ public class ClientSessionThread extends Thread{
 
     private Socket socket;
     private BufferedReader reader;
+    private ArrayList<PrintWriter> writers;
 
-    ClientSessionThread(Socket socket){
+    ClientSessionThread(Socket socket, ArrayList<PrintWriter> writers){
         this.socket = socket;
+        this.writers = writers;
+    }
+
+    private void sendToAll(String message){
+        //sends the string message on every writer in writers. Every clients reader will receive this.
+        for(PrintWriter writer : writers){
+            writer.println(message);
+        }
     }
 
     @Override

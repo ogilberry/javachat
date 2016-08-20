@@ -34,14 +34,16 @@ public class ServerMain {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(newSocket.getInputStream()));
                 String message = reader.readLine();
                 System.out.println("A client says: " + message);
-                ClientSessionThread clientThread = new ClientSessionThread(newSocket);
+                //make a writer for sending lines to the client, store it in writer array
+                PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);
+                writer.println("Welcome! From the server");
+                writers.add(writer);
+                ClientSessionThread clientThread = new ClientSessionThread(newSocket, writers);
                 clientThread.start();
                 /*messages.add(message);
                 printAllMessages();*/
                 //send message to the client
-                /*PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);
-                writer.println("Welcome! From the server");
-                writers.add(writer);*/
+
             }
 
         }catch(IOException ioe){
