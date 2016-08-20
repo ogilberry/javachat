@@ -34,8 +34,10 @@ public class ServerMain {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(newSocket.getInputStream()));
                 String message = reader.readLine();
                 System.out.println("A client says: " + message);
-                messages.add(message);
-                printAllMessages();
+                ClientSessionThread clientThread = new ClientSessionThread(newSocket);
+                clientThread.run();
+                /*messages.add(message);
+                printAllMessages();*/
 
                 //send message to the client
                 PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);

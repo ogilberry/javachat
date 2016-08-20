@@ -22,7 +22,6 @@ public class ClientMain {
 
     public void sendMessageToServer(String message){
         writer.println(message);
-        writer.flush();
     }
 
     private void go(){
