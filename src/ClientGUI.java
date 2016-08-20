@@ -1,4 +1,6 @@
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -18,6 +20,7 @@ public class ClientGUI extends Application {
     private TextArea inputArea;
     private ListView messageView;
     private Button sendButton;
+    private ClientMain client;
 
     public static void main(String[] args){
         launch(args);
@@ -29,6 +32,14 @@ public class ClientGUI extends Application {
         inputArea = new TextArea();
         root.add(inputArea, 1, 2);
         sendButton = new Button("Send Message");
+        sendButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //when the button is pressed, grab the text from the inputArea, and send it to the server
+                String message = inputArea.getText();
+                inputArea.clear();
+            }
+        });
         root.add(sendButton, 1, 3);
     }
 
@@ -45,7 +56,7 @@ public class ClientGUI extends Application {
         root = new GridPane();
         setRootSettings();
 
-        ClientMain client = new ClientMain("localhost", 55555);
+        client = new ClientMain("localhost", 55555);
 
         //create all the controls
         createMessagingControls();

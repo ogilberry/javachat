@@ -31,12 +31,8 @@ public class ClientMain {
             //reader to read lines of text from the server
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             //loop for messages from the server
-            while(true){
-                if(reader.ready()) {
-                    String message = reader.readLine();
-                    System.out.println(message);
-                }
-            }
+            ClientMainThread messageThread = new ClientMainThread(reader);
+            messageThread.start();
 
         }catch(IOException ioe){
             ioe.printStackTrace();
