@@ -38,7 +38,7 @@ public class ServerMain {
                 PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);
                 writer.println("Welcome! From the server");
                 writers.add(writer);
-                ClientSessionThread clientThread = new ClientSessionThread(newSocket, writers);
+                ClientSessionThread clientThread = new ClientSessionThread(newSocket, writer, writers);
                 clientThread.start();
                 /*messages.add(message);
                 printAllMessages();*/

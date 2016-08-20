@@ -37,6 +37,7 @@ public class ClientGUI extends Application {
         messageView.setEditable(false);
         root.add(messageView, 1, 1);
         inputArea = new TextArea();
+        inputArea.setPrefHeight(60);
         root.add(inputArea, 1, 2);
         sendButton = new Button("Send Message");
         sendButton.setOnAction(new EventHandler<ActionEvent>() {

@@ -17,6 +17,7 @@ public class ClientMain {
     private BufferedReader reader;
     private ArrayList<String> messages;
     private ClientGUI clientGUI;
+    private String clientName;
 
     ClientMain(String host, int port, ArrayList<String> messages, ClientGUI clientGUI){
         this.host = host;

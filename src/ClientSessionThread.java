@@ -12,11 +12,13 @@ public class ClientSessionThread extends Thread{
 
     private Socket socket;
     private BufferedReader reader;
+    private PrintWriter myWriter;
     private ArrayList<PrintWriter> writers;
 
-    ClientSessionThread(Socket socket, ArrayList<PrintWriter> writers){
+    ClientSessionThread(Socket socket, PrintWriter myWriter, ArrayList<PrintWriter> writers){
         this.socket = socket;
         this.writers = writers;
+        this.myWriter = myWriter;
     }
 
     private void sendToAll(String message){
