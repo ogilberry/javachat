@@ -13,6 +13,7 @@ public class ClientMain {
     private String host;
     private int port;
     private PrintWriter writer;
+    private BufferedReader reader;
 
     ClientMain(String host, int port){
         this.host = host;
@@ -34,7 +35,7 @@ public class ClientMain {
             writer.println("Hello Server! From the client");
 
             //reader to read lines of text from the server
-            BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             //loop for messages from the server
             ClientMainThread messageThread = new ClientMainThread(reader);
             messageThread.start();

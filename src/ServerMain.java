@@ -27,22 +27,21 @@ public class ServerMain {
 
             //loop for connections and accept them
             while(true){
+                System.out.println("Waiting for a connection...");
                 Socket newSocket = server.accept();
                 System.out.println("Connection accepted from " + newSocket.getInetAddress().getHostName());
-
                 //get message from the client
                 BufferedReader reader = new BufferedReader(new InputStreamReader(newSocket.getInputStream()));
                 String message = reader.readLine();
                 System.out.println("A client says: " + message);
                 ClientSessionThread clientThread = new ClientSessionThread(newSocket);
-                clientThread.run();
+                clientThread.start();
                 /*messages.add(message);
                 printAllMessages();*/
-
                 //send message to the client
-                PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);
+                /*PrintWriter writer = new PrintWriter(newSocket.getOutputStream(), true);
                 writer.println("Welcome! From the server");
-                writers.add(writer);
+                writers.add(writer);*/
             }
 
         }catch(IOException ioe){

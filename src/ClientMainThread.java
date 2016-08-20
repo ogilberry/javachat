@@ -15,6 +15,7 @@ public class ClientMainThread extends Thread {
     @Override
     public void run(){
         try {
+            System.out.println("ClientMainThread started!");
             while(true) {
                 if (reader.ready()) {
                     String message = reader.readLine();
