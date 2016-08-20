@@ -44,6 +44,7 @@ public class ClientGUI extends Application {
 
         root = new GridPane();
         setRootSettings();
+
         //create all the controls
         createMessagingControls();
 
