@@ -24,6 +24,11 @@ public class ClientSessionThread extends Thread{
     private void sendToAll(String message){
         //sends the string message on every writer in writers. Every clients reader will receive this.
         for(PrintWriter writer : writers){
+            //messages should come in the format "username: message". check this is the case, then
+            //replace the username with 'You' for the writer that matches myWriter
+            if(message.contains(":") && myWriter.hashCode()==writer.hashCode()){
+                message = "You " + message.substring(message.indexOf(":"));
+            }
             writer.println(message);
         }
     }
