@@ -29,7 +29,7 @@ public class ClientSessionThread extends Thread{
             //replace the username with 'You' for the writer that matches myWriter
             String finalMessage = message;
             if(message.contains(":") && myWriter==writer){
-                finalMessage = "You " + message.substring(message.indexOf(":"));
+                finalMessage = "You" + message.substring(message.indexOf(":"));
             }
             else{
                 finalMessage = message;
