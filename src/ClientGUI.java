@@ -20,41 +20,24 @@ public class ClientGUI extends Application {
     private Stage primaryStage;
     private GridPane messagingPane;
     private GridPane loginPane;
+    private GridPane connectionPane;
     private Scene messagingScene;
     private Scene loginScene;
+    private Scene connectionScene;
     private TextArea inputArea;
     private TextArea messageView;
     private TextField usernameField;
+    private TextField hostField;
     private PasswordField passwordField;
     private Button loginButton;
     private Button sendButton;
+    private Button connectButton;
     private ClientMain client;
     private ArrayList<String> messages;
     private String clientName;      //the username currently using the client
 
     public static void main(String[] args){
         launch(args);
-    }
-
-    private void createMessagingControls(){
-        messageView = new TextArea();
-        messageView.setPrefHeight(200);
-        messageView.setEditable(false);
-        messagingPane.add(messageView, 1, 1);
-        inputArea = new TextArea();
-        inputArea.setPrefHeight(60);
-        messagingPane.add(inputArea, 1, 2);
-        sendButton = new Button("Send Message");
-        sendButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                //when the button is pressed, grab the text from the inputArea, and send it to the server
-                String message = clientName + ": " + inputArea.getText();
-                inputArea.clear();
-                client.sendMessageToServer(message);
-            }
-        });
-        messagingPane.add(sendButton, 1, 3);
     }
 
     private void setLoginPaneSettings(){
@@ -117,6 +100,36 @@ public class ClientGUI extends Application {
         });
         loginPane.add(loginButton, 2, 3);
 
+    }
+
+    private void createMessagingControls(){
+        messageView = new TextArea();
+        messageView.setPrefHeight(200);
+        messageView.setEditable(false);
+        messagingPane.add(messageView, 1, 1);
+        inputArea = new TextArea();
+        inputArea.setPrefHeight(60);
+        messagingPane.add(inputArea, 1, 2);
+        sendButton = new Button("Send Message");
+        sendButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //when the button is pressed, grab the text from the inputArea, and send it to the server
+                String message = clientName + ": " + inputArea.getText();
+                inputArea.clear();
+                client.sendMessageToServer(message);
+            }
+        });
+        messagingPane.add(sendButton, 1, 3);
+    }
+
+    private void createConnectionControls(){
+        Label hostLabel = new Label("Host Address: ");
+        connectionPane.add(hostLabel, 1, 1);
+        hostField = new TextField();
+        connectionPane.add(hostField, 1, 2);
+        connectButton = new Button("Connect to Server");
+        connectionPane.add(connectButton, 2, 2);
     }
 
     @Override
