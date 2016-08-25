@@ -54,6 +54,13 @@ public class ClientGUI extends Application {
         messagingPane.setVgap(10);
     }
 
+    private void setConnectionPaneSettings(){
+        connectionPane.setAlignment(Pos.CENTER);
+        connectionPane.setPadding(new Insets(20, 20, 20, 20));
+        connectionPane.setHgap(10);
+        connectionPane.setVgap(10);
+    }
+
     public void updateMessageView(){
         messageView.clear();
         for(String message : messages){
@@ -73,6 +80,15 @@ public class ClientGUI extends Application {
         primaryStage.setScene(messagingScene);
     }
 
+    private void startConnectionScene(){
+        //create all the controls and member variables needed for the messaging scene, then go there
+        connectionPane = new GridPane();
+        setConnectionPaneSettings();
+        createConnectionControls();
+        connectionScene = new Scene(messagingPane, 400, 400);
+        primaryStage.setScene(connectionScene);
+}
+    
     private void createLoginControls(){
         Label usernameLabel = new Label("Username: ");
         loginPane.add(usernameLabel, 1, 1);
