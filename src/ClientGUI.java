@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.net.ConnectException;
 import java.util.ArrayList;
 
 /**
@@ -29,6 +30,7 @@ public class ClientGUI extends Application {
     private Scene messagingScene;
     private Scene loginScene;
     private Scene connectionScene;
+    private Label connectionErrorLabel;
     private TextArea inputArea;
     private TextArea messageView;
     private TextField usernameField;
@@ -145,8 +147,9 @@ public class ClientGUI extends Application {
     private void createConnectionControls(){
         Label hostLabel = new Label("Host Address: ");
         connectionPane.add(hostLabel, 1, 1);
-        Label errorLabel = new Label("");
-        connectionPane.add(errorLabel, 1, 3, 2, 1);
+        connectionErrorLabel = new Label("");
+        connectionErrorLabel.setStyle("-fx-text-fill: red;");
+        connectionPane.add(connectionErrorLabel, 1, 3, 2, 1);
         hostField = new TextField();
         connectionPane.add(hostField, 2, 1);
         connectButton = new Button("Connect to Server");
@@ -157,10 +160,14 @@ public class ClientGUI extends Application {
                 startMessagingScene();
                 messages = new ArrayList<String>();
                 client = new ClientMain(hostField.getText(), port, messages, gui);
-
             }
         });
         connectionPane.add(connectButton, 2, 2);
+    }
+
+    public void setConnectionError(String message){
+        primaryStage.setScene(connectionScene);
+        connectionErrorLabel.setText(message);
     }
 
     @Override

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="812f0481-49bc-43be-b745-3d12b19ec5a7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClientGUI.java" afterPath="$PROJECT_DIR$/src/ClientGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ClientMain.java" afterPath="$PROJECT_DIR$/src/ClientMain.java" />
     </list>
     <ignored path="javachat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,13 +56,15 @@
       <file leaf-file-name="ClientGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="157" column="29" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
+            <state relative-caret-position="38">
+              <caret line="154" column="43" selection-start-line="154" selection-start-column="43" selection-end-line="154" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#setConnectionPaneSettings#0;class#ClientGUI#0" expanded="false" />
+                <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+                <element signature="method#startMessagingScene#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#startConnectionScene#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
@@ -74,11 +77,21 @@
       <file leaf-file-name="ClientMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="146">
+              <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Socket.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/net/Socket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,9 +130,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/ClientMainThread.java" />
         <option value="$PROJECT_DIR$/src/ServerMain.java" />
-        <option value="$PROJECT_DIR$/src/ClientMain.java" />
         <option value="$PROJECT_DIR$/src/ClientSessionThread.java" />
         <option value="$PROJECT_DIR$/src/ClientGUI.java" />
+        <option value="$PROJECT_DIR$/src/ClientMain.java" />
       </list>
     </option>
   </component>
@@ -709,12 +722,12 @@
       <workItem from="1471660750956" duration="26075000" />
       <workItem from="1471741597578" duration="2819000" />
       <workItem from="1472102172216" duration="2821000" />
-      <workItem from="1472162775079" duration="1490000" />
+      <workItem from="1472162775079" duration="3150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33500000" />
+    <option name="totallyTimeSpent" value="35160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -791,7 +804,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ClientGUI.java</url>
-          <line>55</line>
+          <line>57</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -835,6 +848,8 @@
             <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#startMessagingScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#startConnectionScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
@@ -893,6 +908,8 @@
             <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#startMessagingScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#startConnectionScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
@@ -951,6 +968,8 @@
             <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#startMessagingScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#startConnectionScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
@@ -988,6 +1007,8 @@
             <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#startMessagingScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#startConnectionScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
@@ -1025,16 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClientMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientMainThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1045,15 +1056,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/net/Socket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="157" column="29" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
+        <state relative-caret-position="38">
+          <caret line="154" column="43" selection-start-line="154" selection-start-column="43" selection-end-line="154" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setMessagingPaneSettings#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionPaneSettings#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#updateMessageView#0;class#ClientGUI#0" expanded="false" />
+            <element signature="method#startMessagingScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#startConnectionScene#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />

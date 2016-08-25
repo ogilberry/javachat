@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.ConnectException;
 import java.net.Socket;
 import java.util.ArrayList;
 
@@ -32,7 +33,7 @@ public class ClientMain {
     }
 
     private void go(){
-        try{
+        try {
             //connect to the server
             Socket socket = new Socket(host, port);
 
@@ -45,6 +46,8 @@ public class ClientMain {
             //loop for messages from the server
             ClientMainThread messageThread = new ClientMainThread(reader, messages, clientGUI);
             messageThread.start();
+        }catch(ConnectException ce){
+            clientGUI.setConnectionError("Could not connect to this host.");
 
         }catch(IOException ioe){
             ioe.printStackTrace();
