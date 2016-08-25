@@ -21,6 +21,7 @@ import java.util.ArrayList;
  */
 public class ClientGUI extends Application {
 
+    private final int port = 55555;
     private Stage primaryStage;
     private GridPane messagingPane;
     private GridPane loginPane;
@@ -79,7 +80,7 @@ public class ClientGUI extends Application {
         createMessagingControls();
         primaryStage.setScene(messagingScene);
         messages = new ArrayList<String>();
-        client = new ClientMain("localhost", 55555, messages, this);
+        client = new ClientMain("localhost", port, messages, this);
         messagingScene = new Scene(messagingPane, 400, 400);
         primaryStage.setScene(messagingScene);
     }
