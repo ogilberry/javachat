@@ -6,7 +6,11 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -32,7 +36,7 @@ public class ClientGUI extends Application {
     private Button loginButton;
     private Button sendButton;
     private Button connectButton;
-    private ClientMain client;
+    private ClientMain client; //socket containing class, does all the communication with server
     private ArrayList<String> messages;
     private String clientName;      //the username currently using the client
 
@@ -85,7 +89,7 @@ public class ClientGUI extends Application {
         connectionPane = new GridPane();
         setConnectionPaneSettings();
         createConnectionControls();
-        connectionScene = new Scene(messagingPane, 400, 400);
+        connectionScene = new Scene(connectionPane, 400, 400);
         primaryStage.setScene(connectionScene);
 }
 
@@ -143,7 +147,7 @@ public class ClientGUI extends Application {
         Label hostLabel = new Label("Host Address: ");
         connectionPane.add(hostLabel, 1, 1);
         hostField = new TextField();
-        connectionPane.add(hostField, 1, 2);
+        connectionPane.add(hostField, 2, 1);
         connectButton = new Button("Connect to Server");
         connectButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
