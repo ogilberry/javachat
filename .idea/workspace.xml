@@ -55,8 +55,8 @@
       <file leaf-file-name="ClientGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+            <state relative-caret-position="211">
+              <caret line="141" column="43" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
@@ -68,6 +68,8 @@
                 <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
+                <element signature="e#5457#5458#0" expanded="true" />
+                <element signature="e#5510#5511#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -710,12 +712,12 @@
       <workItem from="1471653310632" duration="295000" />
       <workItem from="1471660750956" duration="26075000" />
       <workItem from="1471741597578" duration="2819000" />
-      <workItem from="1472102172216" duration="1119000" />
+      <workItem from="1472102172216" duration="1255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30308000" />
+    <option name="totallyTimeSpent" value="30444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -797,7 +799,7 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -842,6 +844,8 @@
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
+            <element signature="e#5457#5458#0" expanded="true" />
+            <element signature="e#5510#5511#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,6 +906,8 @@
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
+            <element signature="e#5457#5458#0" expanded="true" />
+            <element signature="e#5510#5511#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -941,6 +947,8 @@
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
+            <element signature="e#5457#5458#0" expanded="true" />
+            <element signature="e#5510#5511#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -996,8 +1004,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+        <state relative-caret-position="211">
+          <caret line="141" column="43" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
@@ -1009,6 +1017,8 @@
             <element signature="method#createLoginControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createMessagingControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
+            <element signature="e#5457#5458#0" expanded="true" />
+            <element signature="e#5510#5511#0" expanded="true" />
           </folding>
         </state>
       </provider>

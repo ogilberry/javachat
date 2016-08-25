@@ -88,7 +88,7 @@ public class ClientGUI extends Application {
         connectionScene = new Scene(messagingPane, 400, 400);
         primaryStage.setScene(connectionScene);
 }
-    
+
     private void createLoginControls(){
         Label usernameLabel = new Label("Username: ");
         loginPane.add(usernameLabel, 1, 1);
@@ -111,7 +111,7 @@ public class ClientGUI extends Application {
                     errorLabel.setText("Error: You must have a username");
                     return;
                 }
-                startMessagingScene();
+                startConnectionScene();
             }
         });
         loginPane.add(loginButton, 2, 3);
@@ -145,6 +145,12 @@ public class ClientGUI extends Application {
         hostField = new TextField();
         connectionPane.add(hostField, 1, 2);
         connectButton = new Button("Connect to Server");
+        connectButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                startMessagingScene();
+            }
+        });
         connectionPane.add(connectButton, 2, 2);
     }
 
