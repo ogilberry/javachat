@@ -79,8 +79,6 @@ public class ClientGUI extends Application {
         setMessagingPaneSettings();
         createMessagingControls();
         primaryStage.setScene(messagingScene);
-        messages = new ArrayList<String>();
-        client = new ClientMain("localhost", port, messages, this);
         messagingScene = new Scene(messagingPane, 400, 400);
         primaryStage.setScene(messagingScene);
     }
@@ -147,13 +145,19 @@ public class ClientGUI extends Application {
     private void createConnectionControls(){
         Label hostLabel = new Label("Host Address: ");
         connectionPane.add(hostLabel, 1, 1);
+        Label errorLabel = new Label("");
+        connectionPane.add(errorLabel, 1, 3, 2, 1);
         hostField = new TextField();
         connectionPane.add(hostField, 2, 1);
         connectButton = new Button("Connect to Server");
+        ClientGUI gui = this;
         connectButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 startMessagingScene();
+                messages = new ArrayList<String>();
+                client = new ClientMain(hostField.getText(), port, messages, gui);
+
             }
         });
         connectionPane.add(connectButton, 2, 2);
