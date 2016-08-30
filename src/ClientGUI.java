@@ -72,6 +72,7 @@ public class ClientGUI extends Application {
 
     public void updateMessageView(){
         messageView.clear();
+        messageView.setStyle("-fx-text-fill: black;");  //when using localhost instead of 127.., messageview text is invisible
         for(String message : messages){
             messageView.appendText(message + "\n");
         }
