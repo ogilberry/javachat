@@ -39,6 +39,7 @@ public class ClientGUI extends Application {
     private Button loginButton;
     private Button sendButton;
     private Button connectButton;
+    private Button disconnectButton;
     private ClientMain client; //socket containing class, does all the communication with server
     private ArrayList<String> messages;
     private String clientName;      //the username currently using the client
@@ -139,6 +140,13 @@ public class ClientGUI extends Application {
                 String message = clientName + ": " + inputArea.getText();
                 inputArea.clear();
                 client.sendMessageToServer(message);
+            }
+        });
+        disconnectButton = new Button("Disconnect");
+        disconnectButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                client.close();
             }
         });
         messagingPane.add(sendButton, 1, 3);
