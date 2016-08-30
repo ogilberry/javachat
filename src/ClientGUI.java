@@ -147,14 +147,11 @@ public class ClientGUI extends Application {
         disconnectButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                try {
-                    client.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+               disconnect();
             }
         });
         messagingPane.add(sendButton, 1, 3);
+        messagingPane.add(disconnectButton, 1, 4);
     }
 
     private void createConnectionControls(){
@@ -181,6 +178,16 @@ public class ClientGUI extends Application {
     public void setConnectionError(String message){
         primaryStage.setScene(connectionScene);
         connectionErrorLabel.setText(message);
+    }
+
+    //close the socket, return to connection screen, maybe send message to server saying have disconnected
+    private void disconnect(){
+        try {
+            client.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        startConnectionScene();
     }
 
     @Override
