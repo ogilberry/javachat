@@ -19,6 +19,7 @@ public class ClientMain {
     private ArrayList<String> messages;
     private ClientGUI clientGUI;
     private String clientName;
+    private Socket socket;
 
     ClientMain(String host, int port, ArrayList<String> messages, ClientGUI clientGUI){
         this.host = host;
@@ -35,7 +36,7 @@ public class ClientMain {
     private void go(){
         try {
             //connect to the server
-            Socket socket = new Socket(host, port);
+            socket = new Socket(host, port);
 
             //send a message to the server
             writer = new PrintWriter(socket.getOutputStream(), true);
@@ -52,6 +53,9 @@ public class ClientMain {
         }catch(IOException ioe){
             ioe.printStackTrace();
         }
+    }
 
+    public void close() throws IOException {
+        socket.close();
     }
 }
