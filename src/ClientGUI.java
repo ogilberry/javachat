@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.net.ConnectException;
@@ -196,6 +197,12 @@ public class ClientGUI extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
+        this.primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                disconnect();   //make sure to try and close the socket when exiting the program
+            }
+        });
         loginPane = new GridPane();
         setLoginPaneSettings();
 

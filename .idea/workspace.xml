@@ -55,8 +55,8 @@
       <file leaf-file-name="ClientGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="136" column="36" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
+            <state relative-caret-position="327">
+              <caret line="214" column="5" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
@@ -69,7 +69,6 @@
                 <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
                 <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-                <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -719,7 +718,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39125000" />
+    <option name="totallyTimeSpent" value="39359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -796,7 +795,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ClientGUI.java</url>
-          <line>59</line>
+          <line>60</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -847,7 +846,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -909,7 +907,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -971,7 +968,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1012,7 +1008,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1089,7 +1084,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1131,7 +1125,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1193,7 +1186,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1255,7 +1247,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1317,7 +1308,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1358,7 +1348,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1421,8 +1410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="136" column="36" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
+        <state relative-caret-position="327">
+          <caret line="214" column="5" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setLoginPaneSettings#0;class#ClientGUI#0" expanded="false" />
@@ -1435,7 +1424,6 @@
             <element signature="method#createConnectionControls#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#setConnectionError#0;class#ClientGUI#0" expanded="false" />
             <element signature="method#disconnect#0;class#ClientGUI#0" expanded="false" />
-            <element signature="method#start#0;class#ClientGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
